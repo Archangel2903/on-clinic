@@ -4,12 +4,12 @@
   border-radius: $border-radius;
 }
 
-@mixin transition($default-transition) {
-  -webkit-transition: $default-transition;
-  -moz-transition: $default-transition;
-  -ms-transition: $default-transition;
-  -o-transition: $default-transition;
-  transition: $default-transition;
+@mixin transition($transition-base) {
+  -webkit-transition: $transition-base;
+  -moz-transition: $transition-base;
+  -ms-transition: $transition-base;
+  -o-transition: $transition-base;
+  transition: $transition-base;
 }
 
 @mixin transform ($transform) {

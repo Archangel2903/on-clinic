@@ -105,7 +105,7 @@ a {
   color: $text-color;
   text-decoration: underline;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  @include transition($default-transition);
+  @include transition($transition-base);
   &:hover {
     text-decoration: underline;
   }
@@ -136,33 +136,33 @@ input[type="submit"] {
 
 ::-webkit-input-placeholder {
   color: $text-color;
-  @include transition($default-transition);
+  @include transition($transition-base);
 }
 
 ::-webkit-textarea-placeholder {
   color: $text-color;
-  @include transition($default-transition);
+  @include transition($transition-base);
 }
 
 input {
   &::-moz-placeholder {
     color: $text-color;
-    @include transition($default-transition);
+    @include transition($transition-base);
   }
   &::-ms-placeholder {
     color: $text-color;
-    @include transition($default-transition);
+    @include transition($transition-base);
   }
 }
 
 textarea {
   &::-moz-placeholder {
     color: $text-color;
-    @include transition($default-transition);
+    @include transition($transition-base);
   }
   &::-ms-placeholder {
     color: $text-color;
-    @include transition($default-transition);
+    @include transition($transition-base);
   }
 }
 

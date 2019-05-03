@@ -3,44 +3,5 @@
 *************************************************/
 
 header {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding: 15px 0;
-  z-index: 1;
-}
 
-.logo {
-  display: inline-block;
-  font-family: $font-family-base;
-  font-weight: 100;
-  font-size: 2.143rem;
-
-  &__img {
-    width: 44px;
-  }
-}
-
-.main-menu {
-  padding: 20px 0;
-
-  &__burger {
-    display: none;
-  }
-  &__nav {
-    font-size: .929rem;
-  }
-  &__nav-link {
-    display: inline-block;
-    color: white;
-    font-weight: 900;
-    text-decoration: none !important;
-    text-transform: uppercase;
-    &:not(:last-child) {
-      margin-right: 25px;
-    }
-    &:hover {
-      color: $main-second-color;
-    }
-  }
 }
