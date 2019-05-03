@@ -1,24 +1,22 @@
-//partials
-@import 'partials/variables';
-@import 'partials/fonts';
-@import 'partials/reset';
-@import 'partials/mixins';
-//components
-@import 'components/header';
-@import 'components/content';
-@import 'components/footer';
-
 /* Bootstrap */
 //require
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 //optional
-//@import "~bootstrap/scss/reboot";
-//@import "~bootstrap/scss/grid";
-//@import "~bootstrap/scss/type";
-//@import "~bootstrap/scss/utilities";
-//@import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/buttons";
 
-/* Slick slider */
-//@import "~slick-carousel/slick/slick.css";
+/* Project style */
+//partials
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/reset';
+@import 'partials/mixins';
+//layout
+@import 'layout/header';
+@import 'layout/content';
+@import 'layout/footer';
