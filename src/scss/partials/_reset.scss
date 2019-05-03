@@ -35,10 +35,12 @@
   box-sizing: border-box;
 }
 
-html {
+html, body {
   height: 100%;
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: $font-family-base;
   font-size: $font-size-default;
 }
 
