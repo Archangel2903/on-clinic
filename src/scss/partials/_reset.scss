@@ -48,6 +48,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
+section {
+  position: relative;
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -225,7 +229,7 @@ input[type="email"]:focus::-webkit-input-placeholder,
 input[type="password"]:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: transparent;
-  @include translate(0, -50%);
+  @include transform(rotate3d(1, 0, 0, 90deg));
 }
 
 input[type="text"]:focus::-moz-placeholder,
@@ -235,7 +239,7 @@ input[type="email"]:focus::-moz-placeholder,
 input[type="password"]:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder {
   color: transparent;
-  @include translate(0, -50%);
+  @include transform(rotate3d(1, 0, 0, 90deg));
 }
 
 input[type="text"]:focus::-ms-placeholder,
@@ -245,7 +249,7 @@ input[type="email"]:focus::-ms-placeholder,
 textarea:focus::-ms-placeholder,
 input[type="password"]:focus::-moz-placeholder {
   color: transparent;
-  @include translate(0, -50%);
+  @include transform(rotate3d(1, 0, 0, 90deg));
 }
 
 hr {

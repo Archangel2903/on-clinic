@@ -1,4 +1,5 @@
-$main-first-color: #f00;
+$main-first-color: #93cc7a;
+$main-first-color-custom: #8ecc6d;
 $main-second-color: #0f0;
 $main-third-color: #00f;
 
@@ -8,8 +9,18 @@ $font-family-unique: 'Times New Roman', serif;
 
 $font-size-default: 16px;
 
-$text-color: #000;
+$title-color: #1a1a1a;
+$text-color: #333;
 $transition-base: all .3s ease 0s;
 
 //Bootstrap var
-$primary: #ff0000;
+//$enable-shadows: true;
+$primary: $main-first-color-custom;
+$dark: $text-color;
+$body-color: $title-color;
+
+$container-max-widths: (
+  xl: 1200px
+);
+
+$font-weight-medium: 500;

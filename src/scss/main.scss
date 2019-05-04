@@ -1,3 +1,10 @@
+/* Project style */
+//partials
+@import 'partials/variables';
+@import 'partials/fonts';
+@import 'partials/reset';
+@import 'partials/mixins';
+
 /* Bootstrap */
 //require
 @import "~bootstrap/scss/functions";
@@ -9,13 +16,8 @@
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/forms";
 
-/* Project style */
-//partials
-@import 'partials/variables';
-@import 'partials/fonts';
-@import 'partials/reset';
-@import 'partials/mixins';
 //layout
 @import 'layout/header';
 @import 'layout/content';
