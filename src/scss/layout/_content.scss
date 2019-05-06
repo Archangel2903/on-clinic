@@ -2,6 +2,16 @@
 ********************* CONTENT ********************
 *************************************************/
 //elements
+.row {
+  &:after {
+    display: none;
+  }
+
+  &.clearfix:after {
+    display: block;
+  }
+}
+
 .section {
 
 }
@@ -12,9 +22,14 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: -1;
 
   &:after {
+    content: '';
     @extend .section-bg;
+    opacity: .25;
+    //background: $main-first-color-custom;
+    z-index: 0;
   }
 
   &__img {
@@ -26,23 +41,28 @@
 }
 
 .title {
-  font-weight: $font-weight-bold;
-  font-size: 2.5rem;
+  font-weight: $font-weight-bold !important;
+  font-size: 2.5rem !important;
+  text-align: center;
 }
 
-.subtitle-line {
+.title-line {
   width: 25px;
   height: 4px;
-  margin: 10px auto 15px;
+  margin: 1.125rem auto 20px;
   background: $main-first-color;
 }
 
 .disc-list {
+  padding: 0;
+  margin: 0;
+
   &__item {
-    margin: 0;
+    color: $dark;
+    line-height: normal;
 
     &:not(:last-child) {
-      margin-right: 75px;
+      margin: 0 0 1.5rem;
     }
 
     &:before {
@@ -54,6 +74,12 @@
       border-radius: 100%;
       margin-right: 17px;
     }
+
+    &.list-inline-item {
+      &:not(:last-child) {
+        margin: 0 75px 0 0;
+      }
+    }
   }
 }
 
@@ -63,7 +89,22 @@
 
   &__item {
     color: $dark;
+    line-height: normal;
+
+    &:not(:last-child) {
+      margin: 0 0 24px;
+    }
   }
+}
+
+.btn-lg {
+  padding: 0.657rem 1rem;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.font-weight-sbold {
+  font-weight: 600;
 }
 
 //contents
@@ -89,10 +130,11 @@
   }
 }
 
-.appointment {
+.appointment-block {
   max-width: 350px;
   padding: 45px 25px 35px;
   border-radius: 30px;
+
   &__title {
     margin: 0 0 10px;
     font-weight: $font-weight-medium;
@@ -112,6 +154,141 @@
       background: rgba(142, 204, 109, 0.31);
     }
   }
+}
 
+.advantages-section {
+  padding: 145px 0 115px;
+}
 
+.advantages {
+  &__box {
+
+  }
+
+  &__text {
+    max-width: 165px;
+  }
+}
+
+.symptoms-section {
+  padding: 120px 0;
+}
+
+.symptoms {
+  padding: 80px 0 0;
+
+  &__box {
+
+  }
+
+  &__caption {
+    font-weight: $font-weight-medium;
+    font-size: 1.313rem;
+  }
+}
+
+.primary-reception-section {
+  padding: 120px 0 125px;
+}
+
+.primary-instruction {
+  padding: 80px 0 0;
+}
+
+.primary-price {
+  padding: 12px 40px;
+  border-radius: 20px;
+  box-shadow: 0 13px 40px rgba(0, 0, 0, 0.07);
+
+  &__text {
+    font-weight: $font-weight-medium;
+    font-size: 1.125rem;
+  }
+
+  &__sum {
+    color: $main-first-color;
+    font-size: 1.313rem;
+  }
+}
+
+.appointment-section {
+  padding: 100px 0;
+
+  .appointment-block {
+    max-width: none;
+    padding: 0;
+
+    &__title {
+      margin: 0 0 20px;
+      font-weight: $font-weight-medium;
+      font-size: 1.188rem;
+    }
+
+    &__text {
+      line-height: 1.25;
+    }
+  }
+}
+
+.instructions-section {
+  padding: 115px 0;
+}
+
+.instructions {
+  margin: 130px 0 0;
+}
+
+.reviews-section {
+  padding: 135px 0 120px;
+}
+
+.reviews {
+  margin: 80px 0 0;
+
+  &__box {
+
+  }
+
+  .card {
+    padding: 30px 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 13px 40px rgba(0, 0, 0, 0.07);
+
+    &-title {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.information-section {
+  padding: 100px 0;
+}
+
+.information {
+  &__box {
+    &:not(:nth-last-child(-n + 2)) {
+      margin-bottom: 125px;
+    }
+  }
+}
+
+.customer-choice-section {
+  padding: 115px 0 120px;
+}
+
+.choice {
+  counter-increment: list 0;
+
+  &__box {
+    position: relative;
+
+    &:before {
+      counter-increment: list;
+      content: counter(list);
+    }
+  }
+}
+
+.statistics-section {
+  padding: 115px 0 125px;
 }

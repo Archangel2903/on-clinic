@@ -14,5 +14,5 @@ $(window).on('load', function () {
 });
 
 $(function () {
-    // $('.content').css('padding-top', $('header').css('height'));
+
 });

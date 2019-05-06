@@ -1,9 +1,5 @@
-/* Project style */
-//partials
-@import 'partials/variables';
 @import 'partials/fonts';
-@import 'partials/reset';
-@import 'partials/mixins';
+@import 'partials/variables';
 
 /* Bootstrap */
 //require
@@ -16,7 +12,13 @@
 @import "~bootstrap/scss/type";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/card";
 @import "~bootstrap/scss/forms";
+
+/* Project style */
+//partials
+@import 'partials/reset';
+@import 'partials/mixins';
 
 //layout
 @import 'layout/header';

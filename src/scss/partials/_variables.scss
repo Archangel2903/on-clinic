@@ -1,26 +1,39 @@
+// main colors
 $main-first-color: #93cc7a;
 $main-first-color-custom: #8ecc6d;
 $main-second-color: #0f0;
 $main-third-color: #00f;
 
+// colors
+$title-color: #1a1a1a;
+$text-color: #333;
+$input-placeholder-color: #837e8e;
+
+// fonts
 $font-family-base: 'sf_ui_display', sans-serif;
 $font-family-custom: 'Arial', sans-serif;
 $font-family-unique: 'Times New Roman', serif;
 
+// font-weight
+$font-weight-medium: 500;
+$font-weight-sbold: 600;
+
+// font-size
 $font-size-default: 16px;
 
-$title-color: #1a1a1a;
-$text-color: #333;
+$line-height-base: 1.25;
+
+// behavior
 $transition-base: all .3s ease 0s;
 
 //Bootstrap var
-//$enable-shadows: true;
-$primary: $main-first-color-custom;
+$enable-shadows: true;
+$primary: $main-first-color;
+
 $dark: $text-color;
+
 $body-color: $title-color;
 
 $container-max-widths: (
-  xl: 1200px
+        xl: 1200px
 );
-
-$font-weight-medium: 500;
