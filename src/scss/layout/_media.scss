@@ -11,10 +11,6 @@
   }
 }
 
-@include media-breakpoint-down(sm) {
-
-}
-
 @include media-breakpoint-up(sm) {
   .title {
     font-size: 2.5rem !important;
@@ -56,6 +52,19 @@
     &:before {
       transform: translate(0, -30px);
     }
+  }
+
+  footer {
+    .appointment-block {
+      top: 50%;
+      left: auto;
+      right: 24%;
+      transform: translate(24%, -50%);
+    }
+  }
+
+  #map {
+    height: 500px;
   }
 }
 
