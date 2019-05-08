@@ -31,7 +31,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg|svg|gif)$/,
-                exclude: /icon/,
+                exclude: /icons/,
                 use: {
                     loader: "file-loader",
                     options: {
@@ -76,7 +76,7 @@ module.exports = {
             template: 'src/index.html',
             filename: "index.html"
         }),
-        new SVGSpritemapPlugin("src/img/icon/*.svg", {
+        new SVGSpritemapPlugin("src/img/icons/*.svg", {
             output: {
                 filename: "img/spritemap.svg"
             }

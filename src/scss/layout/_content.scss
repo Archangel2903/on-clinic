@@ -42,7 +42,7 @@
 
 .title {
   font-weight: $font-weight-bold !important;
-  font-size: 2.5rem !important;
+  font-size: 2.125rem !important;
   text-align: center;
 }
 
@@ -76,8 +76,10 @@
     }
 
     &.list-inline-item {
+      font-size: 1.125rem;
+
       &:not(:last-child) {
-        margin: 0 75px 0 0;
+        margin: 0 2rem 0 0;
       }
     }
   }
@@ -85,6 +87,7 @@
 
 .border-list {
   padding-left: 25px;
+  padding-left: .75rem;
   border-width: 4px !important;
 
   &__item {
@@ -103,8 +106,12 @@
   font-size: 1.125rem;
 }
 
+.font-weight-medium {
+  font-weight: 500 !important;
+}
+
 .font-weight-sbold {
-  font-weight: 600;
+  font-weight: 600 !important;
 }
 
 //contents
@@ -122,11 +129,11 @@
 
 .main-title {
   font-weight: $font-weight-bold;
-  font-size: 4rem;
+  font-size: 2.75rem;
 
   p {
     font-weight: $font-weight-medium;
-    font-size: 2.875rem;
+    font-size: 1.938rem;
   }
 }
 
@@ -266,8 +273,8 @@
 
 .information {
   &__box {
-    &:not(:nth-last-child(-n + 2)) {
-      margin-bottom: 125px;
+    &:not(:last-child) {
+      margin-bottom: 90px;
     }
   }
 }
@@ -277,18 +284,59 @@
 }
 
 .choice {
-  counter-increment: list 0;
+  counter-reset: list;
+  margin-top: 110px;
 
   &__box {
     position: relative;
 
+    &:not(:nth-last-child(-1n + 2)) {
+      margin: 0 0 70px 0;
+    }
+
     &:before {
       counter-increment: list;
-      content: counter(list);
+      content: counter(list, decimal-leading-zero);
+      min-width: 37px;
+      width: 37px;
+      height: 37px;
+      padding: 1.5rem 0 0 1rem;
+      background-color: rgba(147, 204, 122, 0.45);
+      border-radius: 6px;
+      margin: 0 50px 0 0;
+      font-weight: 700;
+      font-size: 1.563rem;
+      line-height: 1;
+      text-align: center;
+      transform: translate(0, -25px);
     }
   }
 }
 
 .statistics-section {
   padding: 115px 0 125px;
+
+  .title-line {
+
+  }
+}
+
+.statistics {
+  &__box {
+    &:not(:nth-last-child(-1n + 4)) {
+      margin: 0 0 75px;
+    }
+
+    .title-line {
+      margin: 20px auto 30px;
+    }
+  }
+
+  &__value {
+    font-size: 1.938rem;
+  }
+
+  &__text {
+
+  }
 }

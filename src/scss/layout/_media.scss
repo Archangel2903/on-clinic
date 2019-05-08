@@ -1,3 +1,66 @@
 /*************************************************
 ****************** MEDIA STYLES ******************
 *************************************************/
+@include media-breakpoint-down(xs) {
+  .main-section {
+    .border-list {
+      &__item {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+
+}
+
+@include media-breakpoint-up(sm) {
+  .title {
+    font-size: 2.5rem !important;
+  }
+
+  .disc-list {
+    &__item.list-inline-item {
+      font-size: 1.25rem;
+
+      &:not(:last-child) {
+        margin: 0 75px 0 0;
+      }
+    }
+  }
+
+  .main-title {
+    font-size: 4rem;
+
+    p {
+      font-size: 2.875rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .information {
+    &__box {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
+
+      &:not(:nth-last-child(-n + 2)) {
+        margin-bottom: 125px;
+      }
+    }
+  }
+
+  .choice__box {
+    &:before {
+      transform: translate(0, -30px);
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .choice {
+    margin-top: 85px;
+  }
+}

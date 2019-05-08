@@ -1,3 +1,5 @@
+@import '~leaflet/dist/leaflet.css';
+
 @import 'partials/fonts';
 @import 'partials/variables';
 
@@ -14,6 +16,7 @@
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/utilities/text";
 
 /* Project style */
 //partials
