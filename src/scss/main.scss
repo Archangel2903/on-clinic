@@ -16,12 +16,14 @@
 @import "~bootstrap/scss/buttons";
 @import "~bootstrap/scss/card";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/modal";
 @import "~bootstrap/scss/utilities/text";
 
 /* Project style */
 //partials
 @import 'partials/reset';
 @import 'partials/mixins';
+@import 'partials/utilits';
 
 //layout
 @import 'layout/header';
