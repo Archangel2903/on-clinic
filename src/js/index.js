@@ -2,6 +2,7 @@ import '../scss/main.scss';
 import $ from 'jquery';
 import 'bootstrap';
 import 'popper.js';
+import IMask from 'imask';
 //Leaflet
 import L from 'leaflet';
 import 'leaflet/dist/images/marker-icon-2x.png';
@@ -14,7 +15,7 @@ import 'leaflet/dist/images/marker-shadow.png';
     function isInt(num) {
         //作用:是否为整数
         //返回:true是 false否
-        var res = false;
+        let res = false;
         try {
             if (String(num).indexOf(".") == -1 && String(num).indexOf(",") == -1) {
                 res = parseInt(num) % 1 === 0 ? true : false;
@@ -28,11 +29,11 @@ import 'leaflet/dist/images/marker-shadow.png';
     function isFloat(num) {
         //作用:是否为小数
         //返回:小数位数(-1不是小数)
-        var res = -1;
+        let res = -1;
         try {
             if (String(num).indexOf(".") != -1) {
-                var index = String(num).indexOf(".") + 1; //获取小数点的位置
-                var count = String(num).length - index; //获取小数点后的个数
+                let index = String(num).indexOf(".") + 1; //获取小数点的位置
+                let count = String(num).length - index; //获取小数点后的个数
                 if (index > 0) {
                     res = count;
                 }
@@ -45,24 +46,24 @@ import 'leaflet/dist/images/marker-shadow.png';
 
     $.fn.numScroll = function (options) {
 
-        var settings = $.extend({
+        let settings = $.extend({
             'time': 1500,
             'delay': 0
         }, options);
 
         return this.each(function () {
-            var $this = $(this);
-            var $settings = settings;
+            let $this = $(this);
+            let $settings = settings;
 
-            var num = $this.attr("data-num") || $this.text(); //实际值
-            var temp = 0; //初始值
+            let num = $this.attr("data-num") || $this.text(); //实际值
+            let temp = 0; //初始值
             $this.text(temp);
-            var numIsInt = isInt(num);
-            var numIsFloat = isFloat(num);
-            var step = (num / $settings.time) * 10; //步长
+            let numIsInt = isInt(num);
+            let numIsFloat = isFloat(num);
+            let step = (num / $settings.time) * 10; //步长
 
             setTimeout(function () {
-                var numScroll = setInterval(function () {
+                let numScroll = setInterval(function () {
                     if (numIsInt) {
                         $this.text(Math.floor(temp));
                     } else if (numIsFloat != -1) {
@@ -94,6 +95,7 @@ $(window).on('load', function () {
     }
 
     $('body').removeClass('loaded');
+
 
 
     /****************************************************************************************/
@@ -144,6 +146,20 @@ $(window).on('load resize', function () {
 });
 
 $(function () {
+    let element1 = document.getElementById('f1_i');
+    let element2 = document.getElementById('f2_i');
+    let element3 = document.getElementById('f3_i');
+    let element4 = document.getElementById('f0_i');
+
+    let maskOptions = {
+        mask: '+{7}(000)000-00-00'
+    };
+
+    let mask1 = IMask(element1, maskOptions);
+    let mask2 = IMask(element2, maskOptions);
+    let mask3 = IMask(element3, maskOptions);
+    let mask4 = IMask(element4, maskOptions);
+
 
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
