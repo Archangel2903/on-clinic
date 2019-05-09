@@ -5,11 +5,11 @@
   padding: 210px 0 95px;
 
   .disc-list {
-    margin: 0 0 75px;
+    margin: 35px 0 65px;
   }
 
   .border-list {
-    margin: 35px 0 0;
+    margin: 30px 0 0;
   }
 }
 
@@ -26,12 +26,12 @@
 .appointment-block {
   width: 100%;
   max-width: 350px;
-  padding: 45px 25px 35px;
+  padding: 40px 25px 35px;
   border-radius: 30px;
   background: rgba(255, 255, 255, 0.9);
 
   &__title {
-    margin: 0 0 10px;
+    margin: 0;
     font-weight: $font-weight-medium;
     font-size: 1.188rem;
   }
@@ -63,7 +63,7 @@
 }
 
 .advantages-section {
-  padding: 145px 0 115px;
+  padding: 145px 0 85px;
 }
 
 .advantages {
@@ -77,28 +77,29 @@
 }
 
 .symptoms-section {
-  padding: 120px 0;
+  padding: 115px 0;
 }
 
 .symptoms {
-  padding: 80px 0 0;
+  padding: 60px 0 0;
 
   &__box {
 
   }
 
   &__caption {
+    margin: 0 0 40px;
     font-weight: $font-weight-medium;
     font-size: 1.313rem;
   }
 }
 
 .primary-reception-section {
-  padding: 120px 0 125px;
+  padding: 125px 0;
 }
 
 .primary-instruction {
-  padding: 80px 0 0;
+  padding: 65px 0 0;
 }
 
 .primary-price {
@@ -118,16 +119,20 @@
 }
 
 .appointment-section {
-  padding: 100px 0;
+  padding: 100px 0 85px;
 
   .appointment-block {
     max-width: none;
     padding: 0;
 
     &__title {
-      margin: 0 0 20px;
+      margin: 0 0 10px;
       font-weight: $font-weight-medium;
       font-size: 1.188rem;
+    }
+
+    &__price {
+      margin: 0 0 40px;
     }
 
     &__text {
@@ -137,7 +142,7 @@
 }
 
 .instructions-section {
-  padding: 115px 0;
+  padding: 110px 0;
 }
 
 .instructions {
@@ -167,7 +172,7 @@
 }
 
 .information-section {
-  padding: 100px 0;
+  padding: 125px 0 80px;
 }
 
 .information {
@@ -176,10 +181,15 @@
       margin-bottom: 90px;
     }
   }
+
+  &__text {
+    max-width: 69%;
+    margin: auto;
+  }
 }
 
 .customer-choice-section {
-  padding: 115px 0 120px;
+  padding: 110px 0 40px;
 }
 
 .choice {
@@ -190,7 +200,7 @@
     position: relative;
 
     &:not(:nth-last-child(-1n + 2)) {
-      margin: 0 0 70px 0;
+      margin: 0 0 110px 0;
     }
 
     &:before {
@@ -213,21 +223,23 @@
 }
 
 .statistics-section {
-  padding: 115px 0 125px;
+  padding: 105px 0 125px;
 
   .title-line {
-
+    margin: 15px auto;
   }
 }
 
 .statistics {
+  padding-top: 60px;
+
   &__box {
     &:not(:nth-last-child(-1n + 4)) {
-      margin: 0 0 75px;
+      margin: 0 0 65px;
     }
 
     .title-line {
-      margin: 20px auto 30px;
+      margin: 6px auto 25px;
     }
   }
 

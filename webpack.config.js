@@ -30,7 +30,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(png|jpg|svg|gif)$/,
+                test: /\.(png|jpg|svg|gif|ico)$/,
                 exclude: /icons/,
                 use: {
                     loader: "file-loader",
@@ -74,7 +74,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
-            filename: "index.html"
+            filename: "index.html",
+            favicon: "./src/favicon.ico"
         }),
         new SVGSpritemapPlugin("src/img/icons/*.svg", {
             output: {

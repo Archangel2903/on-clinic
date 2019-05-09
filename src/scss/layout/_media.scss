@@ -16,16 +16,12 @@
 }
 
 @include media-breakpoint-up(sm) {
-  .title {
-    font-size: 2.5rem !important;
-  }
-
   .disc-list {
     &__item.list-inline-item {
       font-size: 1.25rem;
 
       &:not(:last-child) {
-        margin: 0 75px 0 0;
+        margin: 0 55px 0 0;
       }
     }
   }
@@ -47,7 +43,7 @@
       }
 
       &:not(:nth-last-child(-n + 2)) {
-        margin-bottom: 125px;
+        margin-bottom: 115px;
       }
     }
   }
@@ -60,10 +56,19 @@
 
   footer {
     .appointment-block {
-      top: 50%;
+      padding: 40px 25px 45px;
+      top: 45px;
       left: auto;
-      right: 24%;
-      transform: translate(24%, -50%);
+      right: 30%;
+      transform: translate(30%, 0);
+
+      &__text {
+        margin: 0 0 35px;
+      }
+
+      .title-line {
+        margin: 15px auto;
+      }
     }
   }
 
@@ -74,6 +79,6 @@
 
 @include media-breakpoint-up(lg) {
   .choice {
-    margin-top: 85px;
+    margin-top: 110px;
   }
 }
