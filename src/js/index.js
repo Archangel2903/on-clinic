@@ -139,7 +139,7 @@ $(window).on('load', function () {
 
 $(window).on('load resize', function () {
     if (window.innerWidth <= 992) {
-        $('.main-section').css('padding-top', $('header').innerHeight() + 110);
+        $('.main-section').css('padding-top', $('header').innerHeight());
     } else {
         $('.main-section').css('padding-top', 210);
     }

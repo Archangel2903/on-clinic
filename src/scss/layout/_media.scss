@@ -78,6 +78,28 @@
 }
 
 @include media-breakpoint-up(lg) {
+  .main-section {
+    .disc-list {
+      margin: 35px 0 65px;
+    }
+
+    .border-list {
+      margin: 30px 0 0;
+    }
+  }
+
+  .advantages-section {
+    padding: 145px 0 85px;
+  }
+
+  .symptoms-section {
+    padding: 115px 0;
+  }
+
+  .appointment-section {
+    padding: 100px 0 85px;
+  }
+
   .choice {
     margin-top: 110px;
   }

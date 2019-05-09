@@ -5,11 +5,11 @@
   padding: 210px 0 95px;
 
   .disc-list {
-    margin: 35px 0 65px;
+    margin: 50px 0 60px;
   }
 
   .border-list {
-    margin: 30px 0 0;
+    margin: 40px 0 0;
   }
 }
 
@@ -23,47 +23,8 @@
   }
 }
 
-.appointment-block {
-  width: 100%;
-  max-width: 350px;
-  padding: 40px 25px 35px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.9);
-
-  &__title {
-    margin: 0;
-    font-weight: $font-weight-medium;
-    font-size: 1.188rem;
-  }
-
-  &__text {
-    margin: 0 0 20px;
-  }
-
-  &__price {
-    &-old {
-      text-decoration: line-through;
-    }
-
-    &-new {
-      background: rgba(142, 204, 109, 0.31);
-    }
-  }
-
-  input {
-    &[type="text"],
-    &[type="email"],
-    &[type="number"],
-    &[type="tel"],
-    &[type="search"],
-    &[type="password"] {
-      background: #f2f0f4;
-    }
-  }
-}
-
 .advantages-section {
-  padding: 145px 0 85px;
+  padding: 125px 0;
 }
 
 .advantages {
@@ -77,7 +38,7 @@
 }
 
 .symptoms-section {
-  padding: 115px 0;
+  padding: 85px 0 120px;
 }
 
 .symptoms {
@@ -119,7 +80,7 @@
 }
 
 .appointment-section {
-  padding: 100px 0 85px;
+  padding: 80px 0 85px;
 
   .appointment-block {
     max-width: none;
@@ -137,6 +98,45 @@
 
     &__text {
       line-height: 1.25;
+    }
+  }
+}
+
+.appointment-block {
+  width: 100%;
+  max-width: 350px;
+  padding: 40px 25px 35px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+
+  &__title {
+    margin: 0;
+    font-weight: $font-weight-medium;
+    font-size: 1.188rem;
+  }
+
+  &__text {
+    margin: 0 0 20px;
+  }
+
+  &__price {
+    &-old {
+      text-decoration: line-through;
+    }
+
+    &-new {
+      background: rgba(142, 204, 109, 0.31);
+    }
+  }
+
+  input {
+    &[type="text"],
+    &[type="email"],
+    &[type="number"],
+    &[type="tel"],
+    &[type="search"],
+    &[type="password"] {
+      background: #f2f0f4;
     }
   }
 }
