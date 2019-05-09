@@ -48,9 +48,19 @@
     }
   }
 
-  .choice__box {
-    &:before {
-      transform: translate(0, -30px);
+  .choice {
+    &__box {
+      &:not(:last-child) {
+        margin: auto;
+      }
+
+      &:not(:nth-last-child(-1n + 2)) {
+        margin: 0 0 110px 0;
+      }
+
+      &:before {
+        transform: translate(0, -30px);
+      }
     }
   }
 
