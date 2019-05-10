@@ -87,6 +87,27 @@ import 'leaflet/dist/images/marker-shadow.png';
 })($);
 /****/
 
+$(function () {
+    let element1 = document.getElementById('f1_i');
+    let element2 = document.getElementById('f2_i');
+    let element3 = document.getElementById('f3_i');
+    let element4 = document.getElementById('f0_i');
+
+    let maskOptions = {
+        mask: '+{7}(000)000-00-00'
+    };
+
+    let mask1 = IMask(element1, maskOptions);
+    let mask2 = IMask(element2, maskOptions);
+    let mask3 = IMask(element3, maskOptions);
+    let mask4 = IMask(element4, maskOptions);
+
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    });
+});
+
 $(window).on('load', function () {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
         $('body').addClass('ios');
@@ -96,7 +117,13 @@ $(window).on('load', function () {
 
     $('body').removeClass('loaded');
 
-
+    let img = document.querySelectorAll('img');
+    for (let i = 0; i < img.length; i++) {
+        let data_src = img[i].getAttribute('data-src');
+        if (img[i].getAttribute('data-src') !== "") {
+            img[i].setAttribute('src', data_src);
+        }
+    }
 
     /****************************************************************************************/
     delete L.Icon.Default.prototype._getIconUrl;
@@ -143,25 +170,4 @@ $(window).on('load resize', function () {
     } else {
         $('.main-section').css('padding-top', 210);
     }
-});
-
-$(function () {
-    let element1 = document.getElementById('f1_i');
-    let element2 = document.getElementById('f2_i');
-    let element3 = document.getElementById('f3_i');
-    let element4 = document.getElementById('f0_i');
-
-    let maskOptions = {
-        mask: '+{7}(000)000-00-00'
-    };
-
-    let mask1 = IMask(element1, maskOptions);
-    let mask2 = IMask(element2, maskOptions);
-    let mask3 = IMask(element3, maskOptions);
-    let mask4 = IMask(element4, maskOptions);
-
-
-    $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-    });
 });

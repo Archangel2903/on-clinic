@@ -1,19 +1,8 @@
 /*************************************************
 ****************** MEDIA STYLES ******************
 *************************************************/
-@include media-breakpoint-down(xs) {
-  .main-section {
-    .border-list {
-      &__item {
-        font-size: 1rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 425px) {
-
-}
+// min-width
+@media screen and (min-width: 320px) {}
 
 @include media-breakpoint-up(sm) {
   .disc-list {
@@ -36,6 +25,26 @@
 }
 
 @include media-breakpoint-up(md) {
+  .instructions-section {
+    padding: 105px 0 95px;
+  }
+
+  .instructions {
+    margin: 130px 0 0;
+  }
+
+  .reviews-section {
+    padding: 135px 0 110px;
+  }
+
+  .reviews {
+    margin: 85px 0 0;
+  }
+
+  .information-section {
+    padding: 125px 0 95px;
+  }
+
   .information {
     &__box {
       &:not(:last-child) {
@@ -48,6 +57,10 @@
     }
   }
 
+  .customer-choice-section {
+    padding: 100px 0 60px;
+  }
+
   .choice {
     &__box {
       &:not(:last-child) {
@@ -55,13 +68,17 @@
       }
 
       &:not(:nth-last-child(-1n + 2)) {
-        margin: 0 0 110px 0;
+        margin: 0 0 135px 0;
       }
 
       &:before {
         transform: translate(0, -30px);
       }
     }
+  }
+
+  .statistics-section {
+    padding: 105px 0 125px;
   }
 
   footer {
@@ -104,6 +121,12 @@
 
   .symptoms-section {
     padding: 115px 0;
+
+    .section-bg {
+      &__img {
+        object-position: center;
+      }
+    }
   }
 
   .appointment-section {
@@ -114,3 +137,36 @@
     margin-top: 110px;
   }
 }
+
+@include media-breakpoint-up(xl) {
+  .information {
+    &__text {
+      max-width: 69%;
+    }
+  }
+}
+
+// max-width
+@include media-breakpoint-down(lg) {}
+
+@include media-breakpoint-down(md) {}
+
+@include media-breakpoint-down(sm) {}
+
+@include media-breakpoint-down(xs) {
+  .main-section {
+    .border-list {
+      &__item {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-title {
+    font-size: 2.125rem;
+  }
+}
+
+@media screen and (max-width: 320px) {}

@@ -16,12 +16,12 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-3 col-md-2 pt-2 pt-md-0">
-                    <a href="index.html" class="logo">
-                        <img src="<%= require('./img/logo.png') %>" alt="logo" title="logo">
-                    </a>
+                    <span class="logo">
+                        <img data-src="img/logo.png" src="<%= require('./img/logo.png') %>" alt="logo" title="logo">
+                    </span>
                 </div>
 
-                <div class="col-7 col-md-3 pt-3 pt-lg-2 ml-auto mx-lg-auto">
+                <div class="col-7 col-md-4 pt-3 pt-lg-2 ml-auto mx-lg-auto">
                     <a href="#0" class="d-inline-flex flex-column flex-sm-row ml-2 text-dark">
                         <svg class="mr-3 mb-3 mb-sm-0 mr-md-4" style="min-width: 47px" width="47" height="47" fill="#8ecc6d">
                             <use xlink:href="img/spritemap.svg#sprite-play-rounded"></use>
@@ -33,13 +33,13 @@
 
                 <div class="col-12 col-md-6 pt-3 pt-lg-0 mt-3 m-sm-0">
                     <div class="row text-center text-sm-right">
-                        <div class="col-12 col-lg-6 pb-1 mb-4 m-lg-0">
+                        <div class="col-12 col-lg-5 pb-1 mb-4 m-lg-0">
                             тел.:
                             <a href="tel:+8(727)3474747" class="d-inline-block mx-1 m-md-0 text-dark font-weight-bold">8 (727) 347 - 47 - 47</a>
-                            <a href="tel:+8(707)2501005" class="d-inline-block mx-1 m-md-0 text-dark font-weight-bold">8 (707) 250 - 10 - 05</a>
+                            <a href="tel:+8(707)2501005" class="d-inline-block d-md-block d-lg-inline-block mx-1 m-md-0 text-dark font-weight-bold">8 (707) 250 - 10 - 05</a>
                         </div>
 
-                        <div class="col-12 col-lg-6">
+                        <div class="col-12 col-lg-7">
                             <button type="button" class="btn btn-primary btn-lg px-5 rounded-pill text-white" data-toggle="modal" data-target="#callMe">Перезвонить мне</button>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
 
         <div class="section main-section">
             <div class="section-bg">
-                <img src="<%= require('./img/section-bg01.jpg') %>" class="section-bg__img" alt="" title="">
+                <img data-src="img/section-bg01.jpg" src="<%= require('./img/section-bg01.jpg') %>" class="section-bg__img" alt="bg-img1" title="">
             </div>
 
             <div class="container">
@@ -72,7 +72,7 @@
                         </ul>
                     </div>
 
-                    <div class="col-12 col-lg-5 col-xl-5 offset-xl-1">
+                    <div class="col-12 col-lg-5 col-xl-5 offset-xl-1 pt-1 pt-sm-0">
                         <div class="appointment-block mt-5 mx-auto mt-lg-0 text-center shadow-lg">
                             <p class="appointment-block__title text-uppercase">Запишитесь к врачу online</p>
 
@@ -175,7 +175,7 @@
 
         <div class="section symptoms-section">
             <div class="section-bg">
-                <img src="<%= require('./img/section-bg02.jpg') %>" class="section-bg__img" alt="" title="">
+                <img data-src="img/section-bg02.jpg" src="<%= require('./img/section-bg02.jpg') %>" class="section-bg__img" alt="bg-img2" title="">
             </div>
 
             <div class="container">
@@ -250,7 +250,7 @@
 
         <div class="section appointment-section">
             <div class="section-bg">
-                <img src="<%= require('./img/section-bg03.jpg') %>" class="section-bg__img" alt="" title="">
+                <img data-src="img/section-bg03.jpg" src="<%= require('./img/section-bg03.jpg') %>" class="section-bg__img" alt="bg-img3" title="">
             </div>
 
             <div class="container">
@@ -268,7 +268,7 @@
 
                         <hr class="title-line">
 
-                        <p class="appointment-block__text mb-5 text-dark">Прогрессивный метод лечения геморроя на любой стадии в амбулаторных условиях, не прибегая к <br>
+                        <p class="appointment-block__text mb-5 text-dark">Прогрессивный метод лечения геморроя на любой стадии в амбулаторных условиях, не прибегая к
                             классической хирургической операции и не нарушая привычный образ жизни и трудоспособность пациента</p>
 
                         <form action="" method="" class="d-flex flex-column d-md-block">
@@ -280,7 +280,7 @@
                                 <input type="tel" id="f2_i" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
                             </label>
 
-                            <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Перезвонить мне">
+                            <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 mt-3 mt-sm-0 rounded-pill text-white" value="Перезвонить мне">
                         </form>
                     </div>
                 </div>
@@ -293,9 +293,9 @@
                 <hr class="title-line">
 
                 <div class="instructions row justify-content-center">
-                    <div class="col-10">
-                        <div class="row justify-content-between">
-                            <div class="col-12 col-md-6 d-inline-flex pb-3 mb-5">
+                    <div class="col-12 col-lg-10 p-0">
+                        <div class="row">
+                            <div class="instructions__box col-12 col-md-5 d-inline-flex pb-3 mb-4">
                                 <svg class="mr-4" style="min-width: 35px" width="35" height="35" fill="#8ecc6d">
                                     <use xlink:href="img/spritemap.svg#sprite-check"></use>
                                 </svg>
@@ -303,14 +303,14 @@
                                     кардиолога-терапевта</p>
                             </div>
 
-                            <div class="col-12 col-md-6 d-inline-flex pb-3 mb-5">
+                            <div class="instructions__box col-12 col-md-5 offset-md-1 d-inline-flex pb-3 mb-4">
                                 <svg class="mr-4" style="min-width: 35px" width="35" height="35" fill="#8ecc6d">
                                     <use xlink:href="img/spritemap.svg#sprite-check"></use>
                                 </svg>
                                 <p class="m-0 text-dark"><span class="font-weight-sbold">Вечером и утром перед дезартеризацией</span> нужно сделать очистительную клизму грушей или лекарственной клизмой Микролакс</p>
                             </div>
 
-                            <div class="col-12 col-md-6 d-inline-flex pb-3 mb-5 mb-md-0">
+                            <div class="instructions__box col-12 col-md-5 d-inline-flex pb-3 mb-4 mb-md-0">
                                 <svg class="mr-4" style="min-width: 35px" width="35" height="35" fill="#8ecc6d">
                                     <use xlink:href="img/spritemap.svg#sprite-check"></use>
                                 </svg>
@@ -318,7 +318,7 @@
                                     можно съесть легкий ужин, утром перед процедурой выпить немного воды, бульона или чая</p>
                             </div>
 
-                            <div class="col-12 col-md-6 d-inline-flex pb-3">
+                            <div class="instructions__box col-12 col-md-5 offset-md-1 d-inline-flex pb-3">
                                 <svg class="mr-4" style="min-width: 35px" width="35" height="35" fill="#8ecc6d">
                                     <use xlink:href="img/spritemap.svg#sprite-check"></use>
                                 </svg>
@@ -424,7 +424,7 @@
 
         <div class="section customer-choice-section">
             <div class="section-bg">
-                <img src="<%= require('./img/section-bg04.jpg') %>" class="section-bg__img" alt="" title="">
+                <img data-src="img/section-bg04.jpg" src="<%= require('./img/section-bg04.jpg') %>" class="section-bg__img" alt="bg-img3" title="">
             </div>
 
             <div class="container">
@@ -434,25 +434,21 @@
                 <div class="choice row">
                     <div class="choice__box d-inline-flex col-12 col-md-6">
                         <div class="choice__box-content">
-                            <p class="font-weight-sbold h6 mb-3 pb-3">ГАРАНТИРОВАННЫЙ РЕЗУЛЬТАТ И КОНФИДЕНЦИАЛЬНОСТЬ</p>
-                            <p class="pt-1 m-0">Бесценный практический опыт врачей в диагностике и лечении геморроя в конфиденциальных условиях. Эффективность лечения 98% при
-                                соблюдении всех
-                                рекомендаций врача</p>
+                            <p class="h6 font-weight-sbold text-uppercase">ГАРАНТИРОВАННЫЙ РЕЗУЛЬТАТ И КОНФИДЕНЦИАЛЬНОСТЬ</p>
+                            <p class="pt-1 m-0">Бесценный практический опыт врачей в диагностике и лечении геморроя в конфиденциальных условиях. Эффективность лечения 98% при соблюдении всех рекомендаций врача</p>
                         </div>
                     </div>
 
                     <div class="choice__box d-inline-flex col-12 col-md-6">
                         <div class="choice__box-content">
-                            <p class="font-weight-sbold h6 mb-3 pb-3">МАЛОИНВАЗИВНОЕ ЛЕЧЕНИЕ</p>
-                            <p class="pt-1 m-0">Главное преимущество методики в кардинальном лечении геморроидальных узлов в амбулаторных условиях, не прибегая к скальпелю, как у
-                                мужчин, так и у
-                                женщин за 1 час</p>
+                            <p class="h6 font-weight-sbold text-uppercase">МАЛОИНВАЗИВНОЕ ЛЕЧЕНИЕ</p>
+                            <p class="pt-1 m-0">Главное преимущество методики в кардинальном лечении геморроидальных узлов в амбулаторных условиях, не прибегая к скальпелю, как у мужчин, так и у женщин за 1 час</p>
                         </div>
                     </div>
 
                     <div class="choice__box d-inline-flex col-12 col-md-6">
                         <div class="choice__box-content">
-                            <p class="font-weight-sbold h6 mb-3 pb-3">МЫ ПРЕДЛАГАЕМ ЛЕЧЕНИЕ ПО ПРИНЦИПУ “ВСЕ ВКЛЮЧЕНО”:</p>
+                            <p class="h6 font-weight-sbold text-uppercase">МЫ ПРЕДЛАГАЕМ ЛЕЧЕНИЕ ПО ПРИНЦИПУ “ВСЕ ВКЛЮЧЕНО”:</p>
                             <ul class="p-0 pt-1 m-0">
                                 <li>- после проведения процедуры вы получите сертифицированные препараты и мази;</li>
                                 <li>- повторные приемы и консультации во время лечения – бесплатно;</li>
@@ -463,10 +459,8 @@
 
                     <div class="choice__box d-inline-flex col-12 col-md-6">
                         <div class="choice__box-content">
-                            <p class="font-weight-sbold h6 mb-3 pb-3">БЕЗ ПОТЕРИ ТРУДОСПОСОБНОСТИ</p>
-                            <p class="pt-1 m-0">В отличие от классической хирургической операции, дезартеризация не требует госпитализации и не предусматривает длительного периода
-                                реабилитации.
-                                Пациент сохраняет трудоспособность.</p>
+                            <p class="h6 font-weight-sbold text-uppercase">БЕЗ ПОТЕРИ ТРУДОСПОСОБНОСТИ</p>
+                            <p class="pt-1 m-0">В отличие от классической хирургической операции, дезартеризация не требует госпитализации и не предусматривает длительного периода реабилитации. Пациент сохраняет трудоспособность.</p>
                         </div>
                     </div>
                 </div>
@@ -539,11 +533,11 @@
 
                 <form action="" method="" class="px-2">
                     <label class="w-100 form-group mb-2">
-                        <input type="text" class="form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваше имя">
+                        <input type="text" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваше имя">
                     </label>
 
                     <label class="w-100 form-group pb-2 mb-4">
-                        <input type="tel" id="f3_i" class="form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
+                        <input type="tel" id="f3_i" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
                     </label>
 
                     <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">
@@ -552,17 +546,17 @@
         </div>
 
         <div class="container">
-            <div class="footer-content row align-items-end">
-                <div class="col-md-2 mt-3 mb-5 m-md-0 text-center text-md-left">
-                    <a href="index.html" class="logo d-inline-block pt-3 p-md-0">
-                        <img src="<%= require('./img/logo.png') %>" alt="logo" title="logo">
-                    </a>
+            <div class="footer-content row align-items-end align-items-lg-center">
+                <div class="col-md-2 mt-3 mb-5 m-xl-0 text-center text-md-left">
+                    <span class="logo d-inline-block pt-3 p-md-0">
+                        <img data-src="img/logo.png" src="<%= require('./img/logo.png') %>" alt="logo" title="logo">
+                    </span>
                 </div>
 
                 <div class="col-md-10 mt-3 m-md-0">
-                    <div class="row justify-content-lg-end">
-                        <div class="col-lg-auto d-inline-flex flex-column flex-md-row align-items-center align-items-md-start mb-5 mb-md-3 m-lg-0 text-center text-md-left">
-                            <svg class="mb-3 m-md-0 mx-md-4" style="min-width: 23px" width="23" height="23" fill="#8ecc6d">
+                    <div class="row justify-content-xl-end">
+                        <div class="col-lg-auto d-inline-flex flex-column flex-md-row align-items-center align-items-md-start order-1 mb-5 mb-md-3 m-lg-0 text-center text-md-left">
+                            <svg class="mb-3 mb-md-0 mr-md-3 mx-xl-4" style="min-width: 23px" width="23" height="23" fill="#8ecc6d">
                                 <use xlink:href="img/spritemap.svg#sprite-place"></use>
                             </svg>
 
@@ -573,7 +567,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-md-6 col-lg-3 d-inline-flex flex-column flex-md-row align-items-center align-items-md-start pl-lg-4 mb-5 m-md-0 text-center text-md-left">
+                        <div class="col-md-6 col-lg-auto d-inline-flex flex-column flex-md-row align-items-center align-items-md-start order-3 order-md-2 pl-xl-4 text-center text-md-left">
                             <svg class="mb-3 m-md-0 mr-md-3" style="min-width: 23px" width="23" height="23" fill="#8ecc6d">
                                 <use xlink:href="img/spritemap.svg#sprite-clock"></use>
                             </svg>
@@ -585,7 +579,7 @@
                             </ul>
                         </div>
 
-                        <div class="col-md-6 col-lg-3 d-inline-flex flex-column flex-md-row align-items-center align-items-md-start pl-lg-5 text-center text-md-left">
+                        <div class="col-md-6 col-lg-auto d-inline-flex flex-column flex-md-row align-items-center align-items-md-start order-2 order-md-3 pl-xl-5 mb-5 m-md-0 text-center text-md-left">
                             <svg class="mb-3 m-md-0 mr-md-3" style="min-width: 23px" width="23" height="23" fill="#8ecc6d">
                                 <use xlink:href="img/spritemap.svg#sprite-telephone"></use>
                             </svg>
@@ -610,11 +604,12 @@
     </footer>
     <!-- FOOTER END -->
 </div>
+
 <div class="icon-load">
-    <img src="<%= require('./img/loader.svg') %>" alt="" title="">
+    <img data-src="img/loader.svg" src="<%= require('./img/loader.svg') %>" alt="pre-loader" title="">
 </div>
 
-<div class="modal fade" id="callMe" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="callMe" tabindex="-1" role="dialog" aria-labelledby="callMe" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content w-auto mx-auto border-0 bg-transparent shadow-none">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">

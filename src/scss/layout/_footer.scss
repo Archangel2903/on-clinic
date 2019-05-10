@@ -8,6 +8,14 @@ footer {
     left: 50%;
     z-index: 1000;
     transform: translate(-50%, 0%);
+
+    &__text {
+      margin: 0 0 30px;
+    }
+
+    .title-line {
+      margin: 10px auto 20px;
+    }
   }
 }
 

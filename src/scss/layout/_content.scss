@@ -5,17 +5,17 @@
   padding: 210px 0 95px;
 
   .disc-list {
-    margin: 50px 0 60px;
+    margin: 50px 0;
   }
 
   .border-list {
-    margin: 40px 0 0;
+    margin: 35px 0 0;
   }
 }
 
 .main-title {
   font-weight: $font-weight-bold;
-  font-size: 2.125rem;
+  font-size: 2.75rem;
 
   span {
     font-weight: $font-weight-medium;
@@ -39,6 +39,12 @@
 
 .symptoms-section {
   padding: 85px 0 120px;
+
+  .section-bg {
+    &__img {
+      object-position: 68% center;
+    }
+  }
 }
 
 .symptoms {
@@ -80,14 +86,15 @@
 }
 
 .appointment-section {
-  padding: 80px 0 85px;
+  padding: 80px 0 100px;
 
   .appointment-block {
     max-width: none;
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 
     &__title {
-      margin: 0 0 10px;
+      margin: 0 0 15px;
       font-weight: $font-weight-medium;
       font-size: 1.188rem;
     }
@@ -136,25 +143,31 @@
     &[type="tel"],
     &[type="search"],
     &[type="password"] {
+      height: 50px;
+      font-size: 1rem;
       background: #f2f0f4;
     }
   }
 }
 
 .instructions-section {
-  padding: 110px 0;
+  padding: 85px 0;
 }
 
 .instructions {
-  margin: 130px 0 0;
+  margin: 90px 0 0;
+
+  &__box {
+
+  }
 }
 
 .reviews-section {
-  padding: 135px 0 120px;
+  padding: 80px 0 120px;
 }
 
 .reviews {
-  margin: 80px 0 0;
+  margin: 95px 0 0;
 
   &__box {
 
@@ -172,7 +185,7 @@
 }
 
 .information-section {
-  padding: 125px 0 80px;
+  padding: 75px 0 95px;
 }
 
 .information {
@@ -183,13 +196,12 @@
   }
 
   &__text {
-    max-width: 69%;
     margin: auto;
   }
 }
 
 .customer-choice-section {
-  padding: 110px 0 40px;
+  padding: 110px 0;
 }
 
 .choice {
@@ -227,7 +239,7 @@
 }
 
 .statistics-section {
-  padding: 105px 0 125px;
+  padding: 105px 0 85px;
 
   .title-line {
     margin: 15px auto;
@@ -238,8 +250,8 @@
   padding-top: 60px;
 
   &__box {
-    &:not(:nth-last-child(-1n + 4)) {
-      margin: 0 0 65px;
+    &:not(:nth-last-child(-1n + 3)) {
+      margin: 0 0 70px;
     }
 
     .title-line {
