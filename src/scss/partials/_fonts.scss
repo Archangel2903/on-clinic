@@ -73,6 +73,7 @@ $fonts-path: '../fonts/';
   url('#{$fonts-path}sfuidisplay-bold.woff2') format('woff2'),
   url('#{$fonts-path}sfuidisplay-bold.woff') format('woff'),
   url('#{$fonts-path}sfuidisplay-bold.ttf') format('truetype');
+  font-display: swap;
   font-weight: bold;
   font-style: normal;
 }

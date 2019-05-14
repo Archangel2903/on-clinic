@@ -105,8 +105,9 @@ $(function () {
     });
 
     // intersectionObserver
-    let images = document.querySelectorAll('*[data-src]');
+    let images = document.querySelectorAll('img[data-src]');
     let counters = document.querySelectorAll('.counter');
+    let iframes = document.querySelectorAll('.video-preview');
 
     let observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -127,12 +128,28 @@ $(function () {
             }
         });
     });
+    let observerFrame = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.intersectionRatio > 0) {
+                let newFrame = document.createElement('iframe');
+                let source = entry.target.getAttribute('data-src');
 
+                newFrame.setAttribute('src', source);
+                newFrame.setAttribute('allowfullscreen', 'enabled');
+                entry.target.parentNode.appendChild(newFrame);
+                entry.target.remove();
+            }
+        });
+    });
+
+    images.forEach(function (img) {
+        observer.observe(img);
+    });
     counters.forEach(function (counter) {
         observerC.observe(counter);
     });
-    images.forEach(function (img) {
-        observer.observe(img);
+    iframes.forEach(function (frame) {
+        observerFrame.observe(frame);
     });
 
     /****************************************************************************************/
