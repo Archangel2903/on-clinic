@@ -7,7 +7,6 @@
     <title>On Clinical</title>
 </head>
 <body>
-
 <!-- BODY -->
 <div class="main-wrapper">
     <!-- HEADER -->
@@ -90,13 +89,13 @@
                                 <span class="appointment-block__price-new d-inline-block p-1 mx-4">6720 т.</span>
                             </p>
 
-                            <form action="" method="" class="px-2 mt-4">
+                            <form action="send.php" method="POST" role="form" class="px-2 mt-4">
                                 <label class="w-100 form-group mb-2">
-                                    <input type="text" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя">
+                                    <input type="text" name="name" id="name1" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя">
                                 </label>
 
                                 <label class="w-100 form-group pb-1 mb-4">
-                                    <input type="tel" id="f1_i" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон">
+                                    <input type="tel" name="phone" id="phone1" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон">
                                 </label>
 
                                 <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">
@@ -282,13 +281,13 @@
                         <p class="appointment-block__text mb-5 text-dark">Прогрессивный метод лечения геморроя на любой стадии в амбулаторных условиях, не прибегая к
                             классической хирургической операции и не нарушая привычный образ жизни и трудоспособность пациента</p>
 
-                        <form action="" method="" class="d-flex flex-column d-md-block">
+                        <form action="send.php" method="POST" role="form" class="d-flex flex-column d-md-block">
                             <label class="form-group mr-md-3">
-                                <input type="text" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваше имя">
+                                <input type="text" name="name" id="name2" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваше имя">
                             </label>
 
                             <label class="form-group mr-md-3">
-                                <input type="tel" id="f2_i" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
+                                <input type="tel" name="phone" id="phone2" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
                             </label>
 
                             <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 mt-3 mt-sm-0 rounded-pill text-white" value="Перезвонить мне">
@@ -556,13 +555,13 @@
 
                 <p class="appointment-block__text">Приходи и убедись!</p>
 
-                <form action="" method="" class="px-2">
+                <form action="send.php" method="POST" role="form" class="px-2">
                     <label class="w-100 form-group mb-2">
-                        <input type="text" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваше имя">
+                        <input type="text" name="name" id="name3" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваше имя">
                     </label>
 
                     <label class="w-100 form-group pb-2 mb-4">
-                        <input type="tel" id="f3_i" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
+                        <input type="tel" name="phone" id="phone3" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
                     </label>
 
                     <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">
@@ -636,7 +635,6 @@
 <div class="icon-load">
     <img src="<%= require('./img/loader.svg') %>" alt="pre-loader" title="">
 </div>
-
 <div class="modal fade" id="callMe" tabindex="-1" role="dialog" aria-labelledby="callMe" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content w-auto mx-auto border-0 bg-transparent shadow-none">
@@ -656,13 +654,13 @@
                     <span class="appointment-block__price-new d-inline-block p-2 mx-2">6720 т.</span>
                 </p>
 
-                <form action="" method="" class="px-2 mt-4">
+                <form action="send.php" method="POST" role="form" class="px-2 mt-4">
                     <label class="w-100 form-group mb-2">
-                        <input type="text" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя">
+                        <input type="text" name="name" id="name0" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя">
                     </label>
 
                     <label class="w-100 form-group pb-1 mb-4">
-                        <input type="tel" id="f0_i" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон">
+                        <input type="tel" name="phone" id="phone0" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон">
                     </label>
 
                     <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">

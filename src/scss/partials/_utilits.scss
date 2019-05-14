@@ -134,6 +134,10 @@
   }
 }
 
+.btn.focus, .btn:focus {
+  box-shadow: none;
+}
+
 .btn-lg {
   height: 50px;
   max-width: max-content;

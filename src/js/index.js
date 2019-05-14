@@ -92,10 +92,10 @@ $(function () {
     // input mask
     let maskOptions = {mask: '+{7}(000)000-00-00'};
 
-    let mask1 = IMask(document.getElementById('f1_i'), maskOptions);
-    let mask2 = IMask(document.getElementById('f2_i'), maskOptions);
-    let mask3 = IMask(document.getElementById('f3_i'), maskOptions);
-    let mask4 = IMask(document.getElementById('f0_i'), maskOptions);
+    let mask1 = IMask(document.getElementById('phone0'), maskOptions);
+    let mask2 = IMask(document.getElementById('phone1'), maskOptions);
+    let mask3 = IMask(document.getElementById('phone2'), maskOptions);
+    let mask4 = IMask(document.getElementById('phone3'), maskOptions);
 
     // modal
     $('#myModal').on('shown.bs.modal', function () {
