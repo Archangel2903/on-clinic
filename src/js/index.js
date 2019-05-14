@@ -1,4 +1,5 @@
 import '../scss/main.scss';
+import 'intersection-observer';
 import $ from 'jquery';
 import 'bootstrap';
 import 'popper.js';
@@ -88,43 +89,52 @@ import 'leaflet/dist/images/marker-shadow.png';
 /****/
 
 $(function () {
-    let element1 = document.getElementById('f1_i');
-    let element2 = document.getElementById('f2_i');
-    let element3 = document.getElementById('f3_i');
-    let element4 = document.getElementById('f0_i');
+    // input mask
+    let maskOptions = {mask: '+{7}(000)000-00-00'};
 
-    let maskOptions = {
-        mask: '+{7}(000)000-00-00'
-    };
+    let mask1 = IMask(document.getElementById('f1_i'), maskOptions);
+    let mask2 = IMask(document.getElementById('f2_i'), maskOptions);
+    let mask3 = IMask(document.getElementById('f3_i'), maskOptions);
+    let mask4 = IMask(document.getElementById('f0_i'), maskOptions);
 
-    let mask1 = IMask(element1, maskOptions);
-    let mask2 = IMask(element2, maskOptions);
-    let mask3 = IMask(element3, maskOptions);
-    let mask4 = IMask(element4, maskOptions);
-
-
+    // modal
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
+    });
+
+    // intersectionObserver
+    let images = document.querySelectorAll('*[data-src]');
+    let counters = document.querySelectorAll('.counter');
+
+    let observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.intersectionRatio > 0) {
+                if (entry.target.hasAttribute('data-src')) {
+                    let imgSrc = entry.target.getAttribute('data-src');
+
+                    entry.target.setAttribute('src', imgSrc);
+                    entry.target.removeAttribute('data-src');
+                }
+            }
+        });
+    });
+    let observerC = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.intersectionRatio > 1) {
+                $(entry.target).numScroll();
+            }
+        });
+    });
+
+    counters.forEach(function (counter) {
+        observerC.observe(counter);
+    });
+    images.forEach(function (img) {
+        observer.observe(img);
     });
 });
 
 $(window).on('load', function () {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-        $('body').addClass('ios');
-    } else {
-        $('body').addClass('web');
-    }
-
-    $('body').removeClass('loaded');
-
-    let img = document.querySelectorAll('img');
-    for (let i = 0; i < img.length; i++) {
-        let data_src = img[i].getAttribute('data-src');
-        if (img[i].getAttribute('data-src') !== "") {
-            img[i].setAttribute('src', data_src);
-        }
-    }
-
     /****************************************************************************************/
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({
@@ -150,18 +160,14 @@ $(window).on('load', function () {
 
     basemap.addTo(map);
 
-    setTimeout(function () {
-        map.setView(defaultCenter(), 13, {
+    map.setView(
+        defaultCenter(),
+        13,
+        {
             scrollWheelZoom: false
-        }).scrollWheelZoom.disable();
-    }, 1000);
+        })
+        .scrollWheelZoom.disable();
     /****************************************************************************************/
-
-    $('.num').each(function () {
-        $(this).numScroll({
-            time: 2500
-        });
-    });
 });
 
 $(window).on('load resize', function () {

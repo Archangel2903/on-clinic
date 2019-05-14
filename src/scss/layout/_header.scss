@@ -3,6 +3,11 @@
 *************************************************/
 
 header {
+  order: 1;
+  -webkit-order: 1;
+  width: 100%;
+  min-width: 320px;
+  height: auto;
   position: absolute;
   top: 0;
   left: 0;
