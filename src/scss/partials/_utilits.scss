@@ -1,3 +1,8 @@
+body.modal-open {
+  position: fixed;
+  overflow: hidden !important;
+}
+
 .main-wrapper {
   display: flex;
   flex-direction: column;

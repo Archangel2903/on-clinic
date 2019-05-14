@@ -99,7 +99,9 @@ $(function () {
 
     // modal
     $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
+        $(document).on('touchmove',function(e){
+            e.preventDefault();
+        });
     });
 
     // intersectionObserver
@@ -132,10 +134,9 @@ $(function () {
     images.forEach(function (img) {
         observer.observe(img);
     });
-});
 
-$(window).on('load', function () {
     /****************************************************************************************/
+    //leaflet map
     delete L.Icon.Default.prototype._getIconUrl;
     L.Icon.Default.mergeOptions({
         iconRetinaUrl: 'img/marker-icon-2x.png',
