@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47076302-22"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'UA-47076302-22');
+    </script>
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, shrink-to-fit=no">
     <title>On Clinical</title>
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="style.84d61ac07e5c9eaa8178.min.css" rel="stylesheet">
+    <link href="style.018c495ef5568dd09b0a.min.css" rel="stylesheet">
 </head>
 <body>
 <!-- BODY -->
@@ -25,7 +39,7 @@
                 </div>
 
                 <div class="col-7 col-md-4 pt-3 pt-lg-2 ml-auto mx-lg-auto">
-                    <a href="#0" class="d-inline-flex flex-column flex-sm-row ml-2 text-dark">
+                    <a href="#0" class="d-inline-flex flex-column flex-sm-row ml-2 text-dark" data-toggle="modal" data-target="#videoInfo">
                         <svg class="mr-3 mb-3 mb-sm-0 mr-md-4" style="min-width: 47px" width="47" height="47" fill="#8ecc6d">
                             <use xlink:href="img/spritemap.svg#sprite-play-rounded"></use>
                         </svg>
@@ -93,11 +107,13 @@
 
                             <form action="send.php" method="POST" role="form" class="px-2 mt-4">
                                 <label class="w-100 form-group mb-2">
-                                    <input type="text" name="name" id="name1" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя">
+                                    <input type="text" name="name" id="name1" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя"
+                                           required>
                                 </label>
 
                                 <label class="w-100 form-group pb-1 mb-4">
-                                    <input type="tel" name="phone" id="phone1" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон">
+                                    <input type="tel" name="phone" id="phone1" class="p-mask form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent"
+                                           placeholder="Ваш телефон" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
                                 </label>
 
                                 <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">
@@ -285,11 +301,12 @@
 
                         <form action="send.php" method="POST" role="form" class="d-flex flex-column d-md-block">
                             <label class="form-group mr-md-3">
-                                <input type="text" name="name" id="name2" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваше имя">
+                                <input type="text" name="name" id="name2" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваше имя" required>
                             </label>
 
                             <label class="form-group mr-md-3">
-                                <input type="tel" name="phone" id="phone2" class="form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
+                                <input type="tel" name="phone" id="phone2" class="p-mask form-control-lg py-3 px-4 border rounded-pill" placeholder="Ваш телефон"
+                                       pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
                             </label>
 
                             <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 mt-3 mt-sm-0 rounded-pill text-white" value="Перезвонить мне">
@@ -556,11 +573,12 @@
 
                 <form action="send.php" method="POST" role="form" class="px-2">
                     <label class="w-100 form-group mb-2">
-                        <input type="text" name="name" id="name3" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваше имя">
+                        <input type="text" name="name" id="name3" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваше имя" required>
                     </label>
 
                     <label class="w-100 form-group pb-2 mb-4">
-                        <input type="tel" name="phone" id="phone3" class="w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваш телефон">
+                        <input type="tel" name="phone" id="phone3" class="p-mask w-100 form-control-lg bg-transparent py-3 px-4 border rounded-pill" placeholder="Ваш телефон"
+                               pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
                     </label>
 
                     <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">
@@ -655,11 +673,12 @@
 
                 <form action="send.php" method="POST" role="form" class="px-2 mt-4">
                     <label class="w-100 form-group mb-2">
-                        <input type="text" name="name" id="name0" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя">
+                        <input type="text" name="name" id="name0" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваше имя" required>
                     </label>
 
                     <label class="w-100 form-group pb-1 mb-4">
-                        <input type="tel" name="phone" id="phone0" class="form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон">
+                        <input type="tel" name="phone" id="phone0" class="p-mask form-control-lg w-100 py-3 px-4 border rounded-pill bg-transparent" placeholder="Ваш телефон"
+                               pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
                     </label>
 
                     <input type="submit" class="appointment-block__submit btn btn-primary btn-lg px-5 rounded-pill text-white" value="Записаться">
@@ -668,8 +687,23 @@
         </div>
     </div>
 </div>
+<div class="modal fade" id="videoInfo" tabindex="-1" role="dialog" aria-labelledby="videoInfo" aria-hidden="true">
+    <div class="modal-lg modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content mx-auto border-0 bg-transparent shadow-none">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+
+            <div class="modal-video-wrap bg-white p-4 rounded-lg">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <div class="video-preview" data-src="https://www.youtube.com/embed/3nT9fkYm1HE"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- BODY END   -->
 
-<script type="text/javascript" src="bundle.84d61ac07e5c9eaa8178.min.js"></script>
+<script type="text/javascript" src="bundle.018c495ef5568dd09b0a.min.js"></script>
 </body>
 </html>

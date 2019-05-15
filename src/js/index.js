@@ -89,20 +89,20 @@ import 'leaflet/dist/images/marker-shadow.png';
 /****/
 
 $(function () {
+    // modal
+    $("#videoInfo").on('hidden.bs.modal', function (e) {
+        $("#videoInfo iframe").attr("src", $("#videoInfo iframe").attr("src"));
+    });
+
     // input mask
     let maskOptions = {mask: '+{7}(000)000-00-00'};
+    let inp = document.querySelectorAll('.p-mask');
 
-    let mask1 = IMask(document.getElementById('phone0'), maskOptions);
-    let mask2 = IMask(document.getElementById('phone1'), maskOptions);
-    let mask3 = IMask(document.getElementById('phone2'), maskOptions);
-    let mask4 = IMask(document.getElementById('phone3'), maskOptions);
-
-    // modal
-    $('#myModal').on('shown.bs.modal', function () {
-        $(document).on('touchmove',function(e){
-            e.preventDefault();
+    if (inp.length > 0) {
+        inp.forEach(function (field) {
+            IMask(field, maskOptions);
         });
-    });
+    }
 
     // intersectionObserver
     let images = document.querySelectorAll('img[data-src]');
@@ -135,22 +135,30 @@ $(function () {
                 let source = entry.target.getAttribute('data-src');
 
                 newFrame.setAttribute('src', source);
-                newFrame.setAttribute('allowfullscreen', 'enabled');
+                newFrame.setAttribute('allowfullscreen', '1');
                 entry.target.parentNode.appendChild(newFrame);
                 entry.target.remove();
             }
         });
     });
 
-    images.forEach(function (img) {
-        observer.observe(img);
-    });
-    counters.forEach(function (counter) {
-        observerC.observe(counter);
-    });
-    iframes.forEach(function (frame) {
-        observerFrame.observe(frame);
-    });
+    if (images.length > 0) {
+        images.forEach(function (img) {
+            observer.observe(img);
+        });
+    }
+
+    if (counters.length > 0) {
+        counters.forEach(function (counter) {
+            observerC.observe(counter);
+        });
+    }
+
+    if (iframes.length > 0) {
+        iframes.forEach(function (frame) {
+            observerFrame.observe(frame);
+        });
+    }
 
     /****************************************************************************************/
     //leaflet map
@@ -169,22 +177,23 @@ $(function () {
             return [43.244010, 76.967512];
         }
     };
+    const basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}');
 
     let clinic1 = L.marker([43.23931, 76.94392]).addTo(map).bindPopup('г. Алматы, Проспект Абая, 20/14'),
         clinic2 = L.marker([43.22795, 76.9069]).addTo(map).bindPopup('г. Алматы, улица Габдуллина 94А угол Ауэзова'),
         clinic3 = L.marker([43.25944, 76.95952]).addTo(map).bindPopup('г. Алматы, улица Абдуллиных 30');
 
-    const basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}');
-
     basemap.addTo(map);
 
-    map.setView(
-        defaultCenter(),
-        13,
-        {
-            scrollWheelZoom: false
-        })
-        .scrollWheelZoom.disable();
+    if (map) {
+        map.setView(
+            defaultCenter(),
+            13,
+            {
+                scrollWheelZoom: false
+            })
+            .scrollWheelZoom.disable();
+    }
     /****************************************************************************************/
 });
 
