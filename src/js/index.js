@@ -136,8 +136,12 @@ $(function () {
 
                 newFrame.setAttribute('src', source);
                 newFrame.setAttribute('allowfullscreen', '1');
+
+                newFrame.onload = function() {
+                    entry.target.remove();
+                };
+
                 entry.target.parentNode.appendChild(newFrame);
-                entry.target.remove();
             }
         });
     });
