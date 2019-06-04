@@ -95,12 +95,30 @@ $(function () {
     });
 
     // input mask
-    let maskOptions = {mask: '+{7}(000)000-00-00'};
+    let maskOptions = {
+        mask: '+{7}(000)000-00-00',
+        // lazy:false,
+        placeholderChar: '_',
+    };
     let inp = document.querySelectorAll('.p-mask');
 
     if (inp.length > 0) {
         inp.forEach(function (field) {
             IMask(field, maskOptions);
+
+            let placeholder = '+7(';
+            field.onfocus = function () {
+                if (this.value === placeholder || this.value === '') {
+                    this.value = placeholder
+                } else {
+                    return false;
+                }
+            };
+            field.onblur = function () {
+                if (this.value === placeholder || this.value === '') {
+                    this.value = ''
+                }
+            };
         });
     }
 
