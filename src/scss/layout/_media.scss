@@ -5,6 +5,12 @@
 @media screen and (min-width: 320px) {}
 
 @include media-breakpoint-up(sm) {
+  .logo {
+    img {
+      width: 83px;
+    }
+  }
+
   .disc-list {
     &__item.list-inline-item {
       font-size: 1.25rem;
@@ -15,12 +21,22 @@
     }
   }
 
+  .main-section {
+    .border-list {
+      margin: 35px 0 0;
+    }
+  }
+
   .main-title {
     font-size: 4rem;
 
     span {
       font-size: 2.875rem;
     }
+  }
+
+  .appointment-block {
+    padding: 40px 25px 35px;
   }
 }
 

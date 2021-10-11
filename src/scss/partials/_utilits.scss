@@ -170,3 +170,15 @@ img {
     opacity: 0;
   }
 }
+
+.video-preview {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+}
